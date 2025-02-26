@@ -8,9 +8,11 @@ namespace FixacaoConceitosBasicos1.Model
 {
     internal class CalculaDesconto
     {
-        public static double Calcular(double valor, double desconto)
+        public static double Calcular(double valor, double percentualDesconto)
         {
-            return valor - desconto;
+            double valorDesconto = percentualDesconto / 100;
+            double valorComDesconto = valor * valorDesconto;
+            return valorComDesconto;
         }
     }
 }

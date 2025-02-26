@@ -8,9 +8,11 @@ namespace FixacaoConceitosBasicos1.Model
 {
     internal class CalculaAumento
     {
-        public static double Calcular(double salario, double aumento)
+        public static double Calcular(double salario, double percentualAumento)
         {
-            return salario + aumento;
+            double valorAumento = percentualAumento / 100;
+            double novoSalario = salario * valorAumento;
+            return novoSalario;
         }
     }
 }
