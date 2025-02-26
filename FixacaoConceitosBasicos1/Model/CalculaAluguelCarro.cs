@@ -8,11 +8,11 @@ namespace FixacaoConceitosBasicos1.Model
 {
     internal class CalculaAluguelCarro
     {
-        public static int Calcular(int dias, int KmInicial, int KmFinal)
+        public static double Calcular(int dias, int KmInicial, int KmFinal)
         {
             int aluguelDiario = dias * 95;
-            int KmPercorrido = ((KmFinal - KmInicial) * 35) / 100;
-            int valorFinal = aluguelDiario + KmPercorrido;
+            double KmPercorrido = (KmFinal - KmInicial) * 0.35 ;
+            double valorFinal = aluguelDiario + KmPercorrido;
             return valorFinal;
         }
     }
